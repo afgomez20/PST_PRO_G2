@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,5 +63,11 @@ public class MenuActivity extends AppCompatActivity {
                 Toast.makeText(view.getContext(), "Seleccionaste: "+nombre, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void registro(View view){
+        Intent i = new Intent(this,IngresoPlantaActivity.class);
+        startActivity(i);
+        finish();
     }
 }
