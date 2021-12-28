@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PIS_ADAS">
         <activity
+            android:name=".DatosPlantaActivity"
+            android:exported="false" />
+        <activity
             android:name=".IngresoPlantaActivity"
             android:exported="false" />
         <activity
