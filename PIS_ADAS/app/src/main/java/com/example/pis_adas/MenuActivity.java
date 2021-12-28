@@ -59,8 +59,10 @@ public class MenuActivity extends AppCompatActivity {
         plantas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), DatosPlantaActivity.class);
                 String nombre = plantasList.get(recyclerView.getChildAdapterPosition(view)).getNombre();
                 Toast.makeText(view.getContext(), "Seleccionaste: "+nombre, Toast.LENGTH_SHORT).show();
+                startActivity(i);
             }
         });
     }
@@ -70,4 +72,6 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+
 }
