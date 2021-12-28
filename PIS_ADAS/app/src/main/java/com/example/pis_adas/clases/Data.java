@@ -8,18 +8,18 @@ public class Data {
      * */
     /*libros = {Nombre, Temp min, Hum min}*/
     public static final String[][] plantas = {
-            {"Captus","12","25"},
+            {"Cactus","12","25"},
             {"Rosas","15","29"},
             {"Margaritas","22","14"},
-            {"Captus","15","25"},
-            {"Captus","12","25"},
-            {"Captus","12","25"},
-            {"Captus","12","25"},
-            {"Captus","12","25"}
+            {"Girasoles","15","25"},
+            {"Girasoles","12","25"},
+            {"Cactus","12","25"},
+            {"Rosas","12","25"},
+            {"Margaritas","12","25"}
 
     };
 
-    public static final int[] plantasImg = {R.drawable.orgullo_prejuicio,R.drawable.madame,R.drawable.dracula, R.drawable.it, R.drawable.dune, R.drawable.fundacion,R.drawable.bajo_estrella,R.drawable.ciudad_papel,};
+    public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};
 
     private
     Data() {}

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_index_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PIS_ADAS">
+
         <activity
             android:name=".MenuActivity"
             android:exported="false" />

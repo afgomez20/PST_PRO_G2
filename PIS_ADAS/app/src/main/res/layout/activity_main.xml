@@ -55,21 +55,24 @@
         android:id="@+id/buttonInicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp"
         android:onClick="inicio"
         android:text="Iniciar Sesion"
-        app:backgroundTint="#000000" />
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#66CC99" />
 
     <Button
         android:id="@+id/buttonRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp"
         android:text="Registrarse"
-        app:backgroundTint="#000000" />
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#66CC99" />
 
 </LinearLayout>

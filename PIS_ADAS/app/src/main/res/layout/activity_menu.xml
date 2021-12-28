@@ -18,9 +18,10 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="61dp"
+            android:background="#66CC99"
             android:gravity="center"
             android:text="Listado de plantas"
-            android:textColor="@color/black"
+            android:textColor="@android:color/primary_text_dark_nodisable"
             android:textSize="30sp"
             android:textStyle="italic" />
     </RelativeLayout>
@@ -28,7 +29,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="509dp" />
+        android:layout_height="559dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,6 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ingresar Planta"
+            app:backgroundTint="#66CC99"
+            app:iconTint="@android:color/primary_text_dark_nodisable"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
