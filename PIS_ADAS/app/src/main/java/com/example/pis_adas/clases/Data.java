@@ -21,6 +21,10 @@ public class Data {
             {"Margaritas","12","25"}
 
     };
+
+    public static ArrayList<ListPlanta> plantasList =  new ArrayList<>();
+
+
     /*users = {User, Clave, Nombre,Correo}*/
     public static ArrayList<Usuario> users = new ArrayList<>();
             //(new Usuario("Admin","123","Mr Admin","correo"));
@@ -29,4 +33,10 @@ public class Data {
 
     private
     Data() {}
+
+    public static void cargarLista(){
+        for(int i = 0; i< Data.plantas.length; i++){
+            plantasList.add(new ListPlanta(Data.plantas[i][0], new Float(Data.plantas[i][1]),new Float(Data.plantas[i][2]),Data.plantasImg[i]));
+        }
+    }
 }

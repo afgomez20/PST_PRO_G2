@@ -32,9 +32,9 @@ public class MenuActivity extends AppCompatActivity {
 
     public void init(){
         recyclerView = findViewById(R.id.recyclerView);
-        plantasList = new ArrayList<>();
-        //Cargamos la lista
-        cargarLista();
+        plantasList = Data.plantasList;
+        /*//Cargamos la lista
+        cargarLista();*/
         //Mostramos datos
         mostrarDatos();
     }
@@ -42,12 +42,12 @@ public class MenuActivity extends AppCompatActivity {
     /**
      * Funcion que se encarga de cargar la lista de datos de la clase Data y convertirlas en objeto librosList
      * */
-
+/**
     public void cargarLista(){
         for(int i = 0; i< Data.plantas.length; i++){
             plantasList.add(new ListPlanta(Data.plantas[i][0], new Float(Data.plantas[i][1]),new Float(Data.plantas[i][2]),Data.plantasImg[i]));
         }
-    }
+    }**/
     /**
      * Funcion en cargada de mostrar los datos necesarios para el cardview
      * */

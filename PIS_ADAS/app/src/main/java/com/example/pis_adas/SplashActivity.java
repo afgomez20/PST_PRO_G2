@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
         Data.users.add(new Usuario("admin","123","admin","none"));
-
+        Data.cargarLista();
         new Handler().postDelayed(new Runnable() {
             @Override
 
