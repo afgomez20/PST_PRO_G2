@@ -6,7 +6,7 @@ public class Data {
     /**
      * Base de datos porvisional del sistema
      * */
-    /*libros = {Nombre, Temp min, Hum min}*/
+    /*plantas = {Nombre, Temp min, Hum min}*/
     public static final String[][] plantas = {
             {"Cactus","12","25"},
             {"Rosas","15","29"},
@@ -16,6 +16,11 @@ public class Data {
             {"Cactus","12","25"},
             {"Rosas","12","25"},
             {"Margaritas","12","25"}
+
+    };
+    /*plantas = {User, Clave, Nombre,Correo}*/
+    public static final String[][] users = {
+            {"Admin","123","Mr.Admin","admin@correo.com"}
 
     };
 
