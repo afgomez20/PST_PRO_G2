@@ -22,7 +22,7 @@ public class Data {
 
     };
     /*users = {User, Clave, Nombre,Correo}*/
-    public static ArrayList<Usuario> users =new ArrayList<>();
+    public static ArrayList<Usuario> users = new ArrayList<>();
             //(new Usuario("Admin","123","Mr Admin","correo"));
 
     public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};

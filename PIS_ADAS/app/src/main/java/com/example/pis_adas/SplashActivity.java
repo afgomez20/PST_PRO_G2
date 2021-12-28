@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.example.pis_adas.clases.Data;
+import com.example.pis_adas.clases.Usuario;
+
 public class SplashActivity extends AppCompatActivity {
+
 
     private final int DURACION_SPLASH = 2000;
 
@@ -20,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         setContentView(R.layout.activity_splash);
+        Data.users.add(new Usuario("admin","123","admin","none"));
 
         new Handler().postDelayed(new Runnable() {
             @Override
