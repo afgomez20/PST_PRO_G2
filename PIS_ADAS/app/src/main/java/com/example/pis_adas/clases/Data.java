@@ -2,6 +2,9 @@ package com.example.pis_adas.clases;
 
 import com.example.pis_adas.R;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Data {
     /**
      * Base de datos porvisional del sistema
@@ -19,10 +22,7 @@ public class Data {
 
     };
     /*plantas = {User, Clave, Nombre,Correo}*/
-    public static final String[][] users = {
-            {"Admin","123","Mr.Admin","admin@correo.com"}
-
-    };
+    public static ArrayList<Usuario> users =new ArrayList<>();
 
     public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};
 

@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, MenuActivity.class );
         startActivity(i);
     }
+    public void registro(View view) {
+        Intent i = new Intent(this, RegistroActivity.class );
+        startActivity(i);
+    }
+
 }
