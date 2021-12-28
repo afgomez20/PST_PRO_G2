@@ -21,8 +21,9 @@ public class Data {
             {"Margaritas","12","25"}
 
     };
-    /*plantas = {User, Clave, Nombre,Correo}*/
+    /*users = {User, Clave, Nombre,Correo}*/
     public static ArrayList<Usuario> users =new ArrayList<>();
+            //(new Usuario("Admin","123","Mr Admin","correo"));
 
     public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};
 

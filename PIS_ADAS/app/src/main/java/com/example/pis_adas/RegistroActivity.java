@@ -2,10 +2,10 @@ package com.example.pis_adas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.Usuario;
@@ -31,6 +31,7 @@ public class RegistroActivity extends AppCompatActivity {
                                 correo.getText().toString()));
         System.out.println(Data.users);
         System.out.println("holi abel");
+        Toast.makeText(this,"Se creo correctamente",Toast.LENGTH_SHORT).show();
         finish();
     }
 

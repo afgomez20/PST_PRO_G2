@@ -22,15 +22,16 @@
         android:text="Username:" />
 
     <EditText
-        android:id="@+id/etUser"
+        android:id="@+id/etUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -41,11 +42,12 @@
         android:text="Contraseña:" />
 
     <EditText
-        android:id="@+id/etcorreo"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -56,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:onClick="inicio"
         android:text="Iniciar Sesion"
@@ -69,8 +71,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
+        android:minHeight="48dp"
         android:onClick="registro"
         android:text="Registrarse"
         android:textColor="#FFFFFF"
