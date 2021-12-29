@@ -56,15 +56,16 @@ public class MenuActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         plantas = new PlantaAdapter(this,plantasList);
         recyclerView.setAdapter(plantas);
-        plantas.setOnClickListener(new View.OnClickListener() {
+        /*plantas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), DatosPlantaActivity.class);
+                i.putExtra("planta",plantasList);
                 String nombre = plantasList.get(recyclerView.getChildAdapterPosition(view)).getNombre();
                 Toast.makeText(view.getContext(), "Seleccionaste: "+nombre, Toast.LENGTH_SHORT).show();
                 startActivity(i);
             }
-        });
+        });*/
     }
 
     public void registro(View view){

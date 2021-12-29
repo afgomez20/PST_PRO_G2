@@ -1,15 +1,18 @@
 package com.example.pis_adas.clases;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pis_adas.DatosPlantaActivity;
 import com.example.pis_adas.R;
 
 import java.util.ArrayList;
@@ -47,14 +50,24 @@ public class PlantaAdapter extends RecyclerView.Adapter<PlantaAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        ListPlanta planta = modelo.get(position);
         String nombre = modelo.get(position).getNombre();
         Float tempMin = modelo.get(position).getTempMin();
         Float humMin = modelo.get(position).getHumMin();
         int img = modelo.get(position).getImagen();
-        holder.nombre.setText(nombre);
-        holder.tempMin.setText(tempMin.toString());
-        holder.humMin.setText(humMin.toString());
+        holder.nombre.setText("Planta: "+nombre);
+        holder.tempMin.setText("Temperatura minima: "+tempMin.toString());
+        holder.humMin.setText("Humedad minima: "+humMin.toString());
         holder.img.setImageResource(img);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(holder.itemView.getContext(), DatosPlantaActivity.class);
+                i.putExtra("planta",planta);
+                Toast.makeText(view.getContext(), "Seleccionaste: "+nombre, Toast.LENGTH_SHORT).show();
+                holder.itemView.getContext().startActivity(i);
+            }
+        });
 
     }
 

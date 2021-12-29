@@ -1,6 +1,8 @@
 package com.example.pis_adas.clases;
 
-public class ListPlanta {
+import java.io.Serializable;
+
+public class ListPlanta implements Serializable {
     public String nombre;
     public float tempMin;
     public float humMin;
