@@ -1,6 +1,8 @@
 package com.example.pis_adas.clases;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     public String user;
     public String clave;
     public String nombre;
