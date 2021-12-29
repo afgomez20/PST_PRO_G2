@@ -10,9 +10,13 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="60dp"
+        android:background="#66CC99"
         android:text="Editar Planta"
-        android:textSize="24sp" />
+        android:gravity="center"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textSize="30sp"
+        android:textStyle="italic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +87,6 @@
         android:onClick="guardar"
         android:text="GUARDAR"
         android:textAllCaps="true"
-        android:textColor="#FFFFFF"
         app:backgroundTint="#66CC99" />
 
 </LinearLayout>

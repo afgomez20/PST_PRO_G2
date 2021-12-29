@@ -17,11 +17,11 @@
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="60dp"
             android:background="#66CC99"
             android:gravity="center"
             android:text="Listado de plantas"
-            android:textColor="@android:color/primary_text_dark_nodisable"
+            android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
             android:textSize="30sp"
             android:textStyle="italic" />
     </RelativeLayout>

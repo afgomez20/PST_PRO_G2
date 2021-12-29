@@ -101,7 +101,6 @@
         android:layout_marginRight="10dp"
         android:onClick="registro"
         android:text="Registrarse"
-        android:textColor="#FFFFFF"
         app:backgroundTint="#66CC99" />
 
 </LinearLayout>
