@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.pis_adas.clases.Data;
+import com.example.pis_adas.clases.ListPlanta;
 import com.example.pis_adas.clases.Usuario;
 
 import java.util.ArrayList;
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     public void inicio(View view) {
         usuario=(EditText) findViewById(R.id.etUsuario);
         contra=(EditText) findViewById(R.id.etPassword);
+        for( ListPlanta e : Data.plantasList){
+            System.out.println("Id: "+ e.getId());
+        }
+
         for(int x=0; x<Data.users.size();x++){
             if (usuario.getText().toString().equals(Data.users.get(x).getUser()) &&
                     contra.getText().toString().equals(Data.users.get(x).getClave())){

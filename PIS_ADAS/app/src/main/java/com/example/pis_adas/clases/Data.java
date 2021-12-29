@@ -39,4 +39,25 @@ public class Data {
             plantasList.add(new ListPlanta(Data.plantas[i][0], new Float(Data.plantas[i][1]),new Float(Data.plantas[i][2]),Data.plantasImg[i]));
         }
     }
+
+    public static ListPlanta comprobar(ListPlanta planta){
+        for( ListPlanta e : plantasList){
+            //System.out.println("primer id: "+ e.getId()+", segundo id: "+planta.getId());
+            if (e.equals(planta)){
+                return e;
+            }
+        }
+        return null;
+    }
+
+    public static void actualizarLista(ListPlanta planta){
+        ListPlanta plantaComprobada = comprobar(planta);
+        int indice = plantasList.indexOf(plantaComprobada);
+        System.out.println("imprimire el indice si lo encuentra");
+        System.out.println(indice);
+        System.out.println("Listo");
+        plantasList.get(indice).setHumMin(planta.humMin);
+        plantasList.get(indice).setNombre(planta.nombre);
+        plantasList.get(indice).setTempMin(planta.tempMin);
+    }
 }

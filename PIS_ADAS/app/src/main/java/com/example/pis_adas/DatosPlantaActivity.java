@@ -32,6 +32,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
         Intent i = new Intent(this, EditarPlantaActivity.class);
         i.putExtra("planta",planta);
         startActivity(i);
+        finish();
     }
 
 
