@@ -23,15 +23,12 @@ public class MainActivity extends AppCompatActivity {
     public void inicio(View view) {
         usuario=(EditText) findViewById(R.id.etUsuario);
         contra=(EditText) findViewById(R.id.etPassword);
-        for( ListPlanta e : Data.plantasList){
-            System.out.println("Id: "+ e.getId());
-        }
 
         for(int x=0; x<Data.users.size();x++){
             if (usuario.getText().toString().equals(Data.users.get(x).getUser()) &&
                     contra.getText().toString().equals(Data.users.get(x).getClave())){
                 Intent i = new Intent(this, MenuActivity.class );
-                Toast.makeText(this,"Bienvinido "+Data.users.get(x).getUser(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Bienvenido "+Data.users.get(x).getUser(),Toast.LENGTH_SHORT).show();
                 startActivity(i);
             }
             else {
