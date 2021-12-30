@@ -2,7 +2,6 @@ package com.example.pis_adas.clases;
 
 import com.example.pis_adas.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Data {
@@ -31,12 +30,11 @@ public class Data {
 
     public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};
 
-    private
-    Data() {}
+    private Data() {}
 
     public static void cargarLista(){
         for(int i = 0; i< Data.plantas.length; i++){
-            plantasList.add(new ListPlanta(Data.plantas[i][0], new Float(Data.plantas[i][1]),new Float(Data.plantas[i][2]),Data.plantasImg[i]));
+            plantasList.add(new ListPlanta(Data.plantas[i][0], new Float(Data.plantas[i][1]),new Float(Data.plantas[i][2]), Data.plantasImg[i]));
         }
     }
 

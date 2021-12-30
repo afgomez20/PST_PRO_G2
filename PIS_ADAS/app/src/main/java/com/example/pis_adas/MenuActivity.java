@@ -1,16 +1,12 @@
 package com.example.pis_adas;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.ListPlanta;

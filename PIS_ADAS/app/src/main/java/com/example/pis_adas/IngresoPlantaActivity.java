@@ -1,18 +1,15 @@
 package com.example.pis_adas;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.ListPlanta;
-
-import java.util.Locale;
 
 public class IngresoPlantaActivity extends AppCompatActivity {
     Integer indice;
