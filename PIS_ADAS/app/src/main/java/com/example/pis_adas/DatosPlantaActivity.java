@@ -25,6 +25,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
     ProgressBar progressBar_TA,progressBar_HA,progressBar_HT;
     private Switch b_manual,b_auto;
     private Float tempA_actual,humA_actual,humT_actual;
+    DatabaseReference myRefServo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
         DatabaseReference myRefTA = database.getReference("PLANTAS/ID_0001/DHT11/TA");
         DatabaseReference myRefHA = database.getReference("PLANTAS/ID_0001/DHT11/HA");
         DatabaseReference myRefHT = database.getReference("PLANTAS/ID_0001/M_SENSOR/HT");
-        DatabaseReference myRefServo = database.getReference("PLANTAS/ID_0001/SERVOMOTOR/ESTADO");
+        myRefServo = database.getReference("PLANTAS/ID_0001/SERVOMOTOR/ESTADO");
 
 
         //TEMPERATURA_AMBIENTE
@@ -126,7 +127,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
-                    myRefServo.setValue(120);
+                    myRefServo.setValue(180);
                 }
                 else{
                     myRefServo.setValue(0);
@@ -140,7 +141,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
                     if(tempA_actual>planta.getTempMin() && humA_actual>planta.getHumMin()){
-                        myRefServo.setValue(120);
+                        myRefServo.setValue(180);
                     }
                     else{
                         myRefServo.setValue(0);
@@ -151,9 +152,11 @@ public class DatosPlantaActivity extends AppCompatActivity {
                 }
             }
         });
+        myRefServo.setValue(0);
     }
 
     public void menu(View view){
+        myRefServo.setValue(0);
         finish();
     }
 
