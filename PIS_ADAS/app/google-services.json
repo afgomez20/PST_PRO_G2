@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "745990758429",
+    "project_id": "pis-adas-rtdb",
+    "storage_bucket": "pis-adas-rtdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745990758429:android:fdf99a46f4d59025e426f4",
+        "android_client_info": {
+          "package_name": "com.example.pis_adas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745990758429-vu5e40bcrh2o2smcq1a98gp699o812d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmUabKdgwTHIfHxV9FyYb9yQUndp767wg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745990758429-vu5e40bcrh2o2smcq1a98gp699o812d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
