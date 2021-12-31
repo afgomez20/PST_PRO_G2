@@ -29,8 +29,6 @@ public class RegistroActivity extends AppCompatActivity {
                                 clave.getText().toString(),
                                 nombre.getText().toString(),
                                 correo.getText().toString()));
-        System.out.println(Data.users);
-        System.out.println("holi abel");
         Toast.makeText(this,"Se creo correctamente",Toast.LENGTH_SHORT).show();
         finish();
     }
