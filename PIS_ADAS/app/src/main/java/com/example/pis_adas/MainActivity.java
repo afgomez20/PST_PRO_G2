@@ -14,6 +14,7 @@ import com.example.pis_adas.clases.ListPlanta;
 public class MainActivity extends AppCompatActivity {
     EditText usuario;
     EditText contra;
+    boolean estado = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
                     contra.getText().toString().equals(Data.users.get(x).getClave())){
                 Intent i = new Intent(this, MenuActivity.class );
                 Toast.makeText(this,"Bienvenido "+Data.users.get(x).getUser(),Toast.LENGTH_SHORT).show();
+                estado = true;
                 startActivity(i);
             }
-            else {
-                Toast.makeText(this,"Usuario o Contraseña Incorrecto",Toast.LENGTH_SHORT).show();
-            }
+        }
+        if (estado==false) {
+            Toast.makeText(this, "Usuario o Contraseña Incorrecto", Toast.LENGTH_SHORT).show();
         }
 
     }

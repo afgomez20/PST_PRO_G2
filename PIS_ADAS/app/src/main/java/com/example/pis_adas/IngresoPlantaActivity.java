@@ -31,9 +31,6 @@ public class IngresoPlantaActivity extends AppCompatActivity {
         Intent in = new Intent(this,MenuActivity.class);
 
         for(int i = 0; i< Data.plantas.length; i++){
-            System.out.println(Data.plantas[i][0].toUpperCase().equals(nom_planta.getText().toString().toUpperCase()));
-            System.out.println(Data.plantas[i][0].toUpperCase());
-            System.out.println(nom_planta.getText().toString().toUpperCase());
             if(Data.plantas[i][0].toUpperCase().equals(nom_planta.getText().toString().toUpperCase())){
                 indice = i;
 
