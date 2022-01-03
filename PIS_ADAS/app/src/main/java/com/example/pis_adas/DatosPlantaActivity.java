@@ -143,7 +143,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
-                    if(tempA_actual>planta.getTempMin() && humA_actual>planta.getHumMin()){
+                    if(tempA_actual>planta.getTempMin() && humA_actual<planta.getHumMin()){
                         myRefServo.setValue(180);
                     }
                     else{

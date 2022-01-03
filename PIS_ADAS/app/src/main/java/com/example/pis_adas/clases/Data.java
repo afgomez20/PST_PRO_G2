@@ -40,7 +40,6 @@ public class Data {
 
     public static ListPlanta comprobar(ListPlanta planta){
         for( ListPlanta e : plantasList){
-            //System.out.println("primer id: "+ e.getId()+", segundo id: "+planta.getId());
             if (e.equals(planta)){
                 return e;
             }
