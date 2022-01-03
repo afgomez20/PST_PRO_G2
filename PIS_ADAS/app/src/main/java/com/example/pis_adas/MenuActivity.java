@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.ListPlanta;
 import com.example.pis_adas.clases.PlantaAdapter;
+import com.example.pis_adas.clases.Usuario;
 
 import java.util.ArrayList;
 
@@ -18,20 +19,26 @@ public class MenuActivity extends AppCompatActivity {
 
     PlantaAdapter plantas;
     RecyclerView recyclerView;
-    ArrayList<ListPlanta> plantasList;
+    ArrayList<ListPlanta> plantasList = new ArrayList<>();
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Bundle bundle = getIntent().getExtras();
+        usuario = (Usuario) bundle.getSerializable("usuario");
         init();
     }
 
     public void init(){
         recyclerView = findViewById(R.id.recyclerView);
-        plantasList = Data.plantasList;
-        /*//Cargamos la lista
-        cargarLista();*/
+        for (ListPlanta p :Data.plantasList){
+            if(p.getId_user()== usuario.getId()){
+                plantasList.add(p);
+            }
+        }
+        //plantasList = Data.plantasList;
         //Mostramos datos
         mostrarDatos();
     }
@@ -50,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
      * */
     public void mostrarDatos(){
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        plantas = new PlantaAdapter(this,plantasList);
+        plantas = new PlantaAdapter(this,plantasList,usuario);
         recyclerView.setAdapter(plantas);
         /*plantas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +73,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void registro(View view){
         Intent i = new Intent(this,IngresoPlantaActivity.class);
+        i.putExtra("usuario",usuario);
         startActivity(i);
         finish();
     }

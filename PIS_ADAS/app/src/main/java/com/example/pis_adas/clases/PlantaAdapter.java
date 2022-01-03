@@ -25,16 +25,18 @@ public class PlantaAdapter extends RecyclerView.Adapter<PlantaAdapter.ViewHolder
     LayoutInflater inflater;
 
     Context context;
+    Usuario usuario;
 
     //Listener
     private View.OnClickListener listener;
 
-    public PlantaAdapter(Context context, ArrayList<ListPlanta> modelo){
+    public PlantaAdapter(Context context, ArrayList<ListPlanta> modelo,Usuario usuario){
         this.inflater = LayoutInflater.from(context);
 
         this.context = context;
 
         this.modelo = modelo;
+        this.usuario = usuario;
     }
     @NonNull
     @Override
@@ -56,7 +58,7 @@ public class PlantaAdapter extends RecyclerView.Adapter<PlantaAdapter.ViewHolder
         Float humMin = modelo.get(position).getHumMin();
         int img = modelo.get(position).getImagen();
         holder.nombre.setText("Planta: "+nombre);
-        holder.tempMin.setText("Temperatura minima: "+tempMin.toString());
+        holder.tempMin.setText("Temperatura maxima: "+tempMin.toString());
         holder.humMin.setText("Humedad minima: "+humMin.toString());
         holder.img.setImageResource(img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +66,7 @@ public class PlantaAdapter extends RecyclerView.Adapter<PlantaAdapter.ViewHolder
             public void onClick(View view) {
                 Intent i = new Intent(holder.itemView.getContext(), DatosPlantaActivity.class);
                 i.putExtra("planta",planta);
+                i.putExtra("usuario",usuario);
                 Toast.makeText(view.getContext(), "Seleccionaste: "+nombre, Toast.LENGTH_SHORT).show();
                 holder.itemView.getContext().startActivity(i);
             }

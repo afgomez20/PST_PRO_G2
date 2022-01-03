@@ -10,18 +10,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.ListPlanta;
+import com.example.pis_adas.clases.Usuario;
 
 public class IngresoPlantaActivity extends AppCompatActivity {
     Integer indice;
     EditText tem_minina;
     EditText hum_minima;
     EditText nom_planta;
+    Usuario usuario;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingreso_planta);
+        Bundle bundle = getIntent().getExtras();
+        usuario = (Usuario) bundle.getSerializable("usuario");
     }
 
     public void registrado(View view){
@@ -43,8 +47,9 @@ public class IngresoPlantaActivity extends AppCompatActivity {
             finish();
             return;
         }
-        Data.plantasList.add(new ListPlanta(nom_planta.getText().toString(),new Float(tem_minina.getText().toString()),new Float(hum_minima.getText().toString()),Data.plantasImg[indice]));
+        Data.plantasList.add(new ListPlanta(nom_planta.getText().toString(),new Float(tem_minina.getText().toString()),new Float(hum_minima.getText().toString()),Data.plantasImg[indice],usuario.getId()));
         Toast.makeText(this,"Planta ingresada con éxito",Toast.LENGTH_SHORT).show();
+        in.putExtra("usuario",usuario);
         startActivity(in);
         finish();
     }

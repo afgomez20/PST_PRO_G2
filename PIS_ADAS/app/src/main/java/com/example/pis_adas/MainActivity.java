@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             if (usuario.getText().toString().equals(Data.users.get(x).getUser()) &&
                     contra.getText().toString().equals(Data.users.get(x).getClave())){
                 Intent i = new Intent(this, MenuActivity.class );
+                i.putExtra("usuario",Data.users.get(x));
                 Toast.makeText(this,"Bienvenido "+Data.users.get(x).getUser(),Toast.LENGTH_SHORT).show();
                 estado = true;
                 startActivity(i);
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void registro(View view) {
         Intent i = new Intent(this, RegistroActivity.class );
         startActivity(i);
+        finish();
     }
 
 }

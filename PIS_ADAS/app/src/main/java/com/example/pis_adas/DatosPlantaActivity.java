@@ -13,6 +13,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.pis_adas.clases.ListPlanta;
+import com.example.pis_adas.clases.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +27,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
     private Switch b_manual,b_auto;
     private Float tempA_actual,humA_actual,humT_actual;
     DatabaseReference myRefServo;
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_datos_planta);
         Bundle bundle = getIntent().getExtras();
         planta = (ListPlanta) bundle.getSerializable("planta");
+        usuario = (Usuario) bundle.getSerializable("usuario");
 
         b_manual = (Switch)findViewById(R.id.b_manual);
         b_auto = (Switch)findViewById(R.id.b_auto);
@@ -163,6 +166,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
     public void editar(View view){
         Intent i = new Intent(this, EditarPlantaActivity.class);
         i.putExtra("planta",planta);
+        i.putExtra("usuario",usuario);
         startActivity(i);
         finish();
     }

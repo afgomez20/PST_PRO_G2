@@ -8,13 +8,15 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class ListPlanta implements Serializable {
-    public int id;
-    public String nombre;
-    public float tempMin;
-    public float humMin;
-    public boolean automatic;
-    public boolean manual;
-    public int imagen;
+    private int id;
+    private String nombre;
+    private float tempMin;
+    private float humMin;
+    private boolean automatic;
+    private boolean manual;
+    private int imagen;
+    private int id_user;
+
     public static int contador = 1;
 
     public ListPlanta(String nombre, float tempMin, float humMin, int imagen) {
@@ -25,8 +27,32 @@ public class ListPlanta implements Serializable {
         this.imagen = imagen;
         this.automatic = false;
         this.manual = false;
+        this.id_user = 1;
         contador+=1;
     }
+
+    public ListPlanta(String nombre, float tempMin, float humMin, int imagen, int id_user) {
+        this.id =contador;
+        this.nombre = nombre;
+        this.tempMin = tempMin;
+        this.humMin = humMin;
+        this.imagen = imagen;
+        this.automatic = false;
+        this.manual = false;
+        this.id_user = id_user;
+        contador+=1;
+    }
+    public ListPlanta(int id,String nombre, float tempMin, float humMin, int imagen, int id_user) {
+        this.id =id;
+        this.nombre = nombre;
+        this.tempMin = tempMin;
+        this.humMin = humMin;
+        this.imagen = imagen;
+        this.automatic = false;
+        this.manual = false;
+        this.id_user = id_user;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -83,6 +109,14 @@ public class ListPlanta implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 
     @Override

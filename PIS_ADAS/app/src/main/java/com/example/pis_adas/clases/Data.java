@@ -1,5 +1,8 @@
 package com.example.pis_adas.clases;
 
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
+
 import com.example.pis_adas.R;
 
 import java.util.ArrayList;
@@ -17,16 +20,13 @@ public class Data {
             {"Girasoles","12","25"},
             {"Cactus","12","25"},
             {"Rosas","12","25"},
-            {"Margaritas","12","25"}
-
-    };
+            {"Margaritas","12","25"}};
 
     public static ArrayList<ListPlanta> plantasList =  new ArrayList<>();
 
 
     /*users = {User, Clave, Nombre,Correo}*/
     public static ArrayList<Usuario> users = new ArrayList<>();
-            //(new Usuario("Admin","123","Mr Admin","correo"));
 
     public static final int[] plantasImg = {R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas, R.drawable.girasoles, R.drawable.girasoles, R.drawable.cactus,R.drawable.rosas,R.drawable.margaritas,};
 
@@ -54,8 +54,8 @@ public class Data {
         System.out.println("imprimire el indice si lo encuentra");
         System.out.println(indice);
         System.out.println("Listo");
-        plantasList.get(indice).setHumMin(planta.humMin);
-        plantasList.get(indice).setNombre(planta.nombre);
-        plantasList.get(indice).setTempMin(planta.tempMin);
+        plantasList.get(indice).setHumMin(planta.getHumMin());
+        plantasList.get(indice).setNombre(planta.getNombre());
+        plantasList.get(indice).setTempMin(planta.getTempMin());
     }
 }

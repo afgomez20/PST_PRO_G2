@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
+import com.example.pis_adas.clases.AdminSQLiteOpenHelper;
 import com.example.pis_adas.clases.Data;
 import com.example.pis_adas.clases.Usuario;
 
@@ -26,6 +30,12 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         Data.users.add(new Usuario("admin","123","admin","none"));
         Data.cargarLista();
+        /*//crearDataBase();
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "administracion", null, 1);
+        SQLiteDatabase bd = admin.getReadableDatabase();
+
+        admin.cargarDataUser(bd);*/
         new Handler().postDelayed(new Runnable() {
             @Override
 
@@ -37,5 +47,27 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, DURACION_SPLASH);
     }
+
+    /**public void crearDataBase(){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+        if()
+        //bd.execSQL("insert into articulos (codigo,descripcion,precio) values ("+cod+",'"+descri+"',"+pre+")");
+        bd.close();
+
+    }**/
+    /*public void ingresar(View v) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "administracion", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+
+        bd.execSQL("insert into articulos (codigo,descripcion,precio) values ("+cod+",'"+descri+"',"+pre+")");
+        bd.close();
+
+        Toast.makeText(this, "Se cargaron los datos del artículo",
+                Toast.LENGTH_SHORT).show();
+    }*/
+
 
 }

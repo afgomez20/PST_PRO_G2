@@ -23,6 +23,13 @@ public class Usuario implements Serializable {
         this.correo = correo;
         contador+=1;
     }
+    public Usuario(int id,String user, String clave, String nombre, String correo) {
+        this.id =id;
+        this.user = user;
+        this.clave = clave;
+        this.nombre = nombre;
+        this.correo = correo;
+    }
 
     public String getUser() {
         return user;
