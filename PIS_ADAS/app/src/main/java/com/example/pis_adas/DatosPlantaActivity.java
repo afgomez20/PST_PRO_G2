@@ -92,7 +92,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue().toString();
                 humAmbiente.setText(value+"%");
-                progressBar_HA.setProgress(Integer.parseInt(value));
+                progressBar_HA.setProgress(Math.round(Float.parseFloat(value)));
                 humA_actual = Float.parseFloat(value);
 
             }
@@ -112,7 +112,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue().toString();
                 humTierra.setText(value+"%");
-                progressBar_HT.setProgress(Integer.parseInt(value));
+                progressBar_HT.setProgress(Math.round(Float.parseFloat(value)));
                 humT_actual = Float.parseFloat(value);
 
             }
@@ -143,7 +143,7 @@ public class DatosPlantaActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
-                    if(tempA_actual>planta.getTempMin() && humA_actual<planta.getHumMin()){
+                    if(tempA_actual>planta.getTempMin() && humT_actual<planta.getHumMin()){
                         myRefServo.setValue(180);
                     }
                     else{
