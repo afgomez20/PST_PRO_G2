@@ -64,15 +64,13 @@ void loop() {
   //inicializamos variables de sensores
   t = dht.readTemperature();
   h = dht.readHumidity();
-  estado = firebaseData.intData();
   moisture_percentage = ( 100.00 - ( (analogRead(sensor_pin)/1023.00) * 100.00 ) );
 
   //se obtiene el angulo de inclinacion para el servomotor
   Firebase.getInt(firebaseData,"PLANTAS/ID_0001/SERVOMOTOR/ESTADO");
-  
-  //se setea la inclinacion del servomotor en la base de datos
+  estado = firebaseData.intData();
   myServo.write(estado);
-  
+ 
   //se setea el valor del sensor DHT11 en la base de datos   
   Firebase.setString(firebaseData,"PLANTAS/ID_0001/DHT11/TA", String(t));  
   Firebase.setString(firebaseData,"PLANTAS/ID_0001/DHT11/HA", String(h));
